@@ -1,5 +1,14 @@
-const Message = (props: { message: string }): any => {
-  return <p>{props.message}</p>;
+interface UserMessage {
+  name: string;
+  message: string;
+}
+
+const Message = (props: UserMessage): any => {
+  return (
+    <p>
+      {props.name},{props.message}
+    </p>
+  );
 };
 
 export default Message;
